@@ -1,7 +1,16 @@
-body {
-  display: block; 
-  p{ 
-      color: blue;
-    }
+
+#cart-wrapper{
+    max-width: 1024px;
+    padding: 0 16px;
+    box-sizing: border-box;    
+    margin: 0 auto;
     
+}
+.cart-main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 16px;
+    min-height: 600px;
+    
+
 }
