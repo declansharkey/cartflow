@@ -133,9 +133,17 @@ body{
             "sn sv"
             "st stv"
             "ts ts";
-            grid-template-rows: 1fr auto auto 1fr;
+            grid-template-rows: auto auto auto auto;
             .promo-code{
                 grid-area: pc;
+                color: #1977d3;
+                span.brackets{
+                    color: #8d8d8d;
+                    font-size: 12px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
             }
             .subtotal-name{
                 grid-area: sn;

@@ -88,9 +88,15 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "pc pc" "sn sv" "st stv" "ts ts";
-      grid-template-rows: 1fr auto auto 1fr; }
+      grid-template-rows: auto auto auto auto; }
       body .cart-main .order-total .promo-code {
-        grid-area: pc; }
+        grid-area: pc;
+        color: #1977d3; }
+        body .cart-main .order-total .promo-code span.brackets {
+          color: #8d8d8d;
+          font-size: 12px; }
+        body .cart-main .order-total .promo-code:hover {
+          cursor: pointer; }
       body .cart-main .order-total .subtotal-name {
         grid-area: sn; }
       body .cart-main .order-total .subtotal-value {
