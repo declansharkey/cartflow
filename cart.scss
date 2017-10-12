@@ -76,14 +76,15 @@ body{
         }
     }
     .cart-main{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 16px;
+        display:grid;
+        grid-template-columns:repeat(4, 1fr);
+        grid-gap:16px;
         grid-auto-rows: minmax(88px, auto);
         section{
             border: 1px solid #b3b3b3;
             width: 100%;
             padding: 16px;
+            grid-column: 1/5;
             h1, h2, h3{
                 margin-top: 0;
             }
@@ -92,35 +93,33 @@ body{
             .delivery-method{
                 border-bottom: 1px solid #b3b3b3;
                 padding-bottom: 16px;
-
-                input[type="radio"]{
-                    color: #1977D3;
-                }
             }
 
             .club-select{
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-areas: 
-                "hd hd"
-                "lb lb"
-                "in bt";
-                grid-template-rows: 1fr auto 1fr;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: auto auto 1fr;
                 padding: 16px 0;
+                grid-row-gap: 16px;
+                grid-column-gap: 8px;
                 h3{
-                    grid-area: hd;
+                    grid-column: 1/5;
+                    margin-bottom: 0;
+                    grid-template-rows: auto;
                 }
                 label{
-                    grid-area: lb;
-                    margin-bottom: 10px;
+                    align-self: center;
+                    grid-row: 2;
+                    grid-column: 1/5;
                 }
                 input{
-                    grid-area: in;
                     padding: 5px;
-                    margin-right: 8px;
+                    grid-column: 1/4;
+                    grid-row: 3;
                 }
                 button{
-                    grid-area: bt;
+                    grid-column: 4/5;
+                    grid-row: 3;
                 }
             }
         }
@@ -128,14 +127,9 @@ body{
         .order-total{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-areas: 
-            "pc pc"
-            "sn sv"
-            "st stv"
-            "ts ts";
             grid-template-rows: auto auto auto auto;
             .promo-code{
-                grid-area: pc;
+                grid-column: 1/3;
                 color: #1977d3;
                 span.brackets{
                     color: #8d8d8d;
@@ -146,28 +140,33 @@ body{
                 }
             }
             .subtotal-name{
-                grid-area: sn;
+                grid-column: 1/2;
+                grid-row: 2;
             }
             .subtotal-value{
-                grid-area: sv;
+                grid-column: 2/3;
+                grid-row: 2;
             }
             .sales-tax-text{
-                grid-area: st;
+                grid-column: 1/2;
+                grid-row: 3;
             }
-
             .sales-tax-value{
-                grid-area: stv;
+                grid-column: 2/3;
+                grid-row: 3;
             }
 
             .total-section{
-                grid-area: ts;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
                 border-top: 1px solid #b3b3b3;
-                margin-top: 16px;
+                grid-column: 1/3;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
                 p{
                     margin: 16px 0;
+                }
+
+                .grand-total-value{
+                    justify-self: end;
                 }
 
                 .grand-total, .grand-total-value{
@@ -183,10 +182,78 @@ body{
                 margin: 5px 0;
             } 
         }
+
+        .continue-btn{
+            border: 0;
+            padding: 0;
+            button{
+                width: 100%;
+            }
+        }
     }
 
     header{
         height: 50px;
         background-color: #084c8b;
+    }
+}
+
+// Media Queries
+@media (min-width: 768px) {
+    body{
+        #cart-wrapper{
+            display:grid;
+            grid-template-columns:repeat(12, 1fr);
+            grid-gap:16px;
+            .title{
+                margin-top: 20px;
+                grid-column: 2/12;
+            }
+            .cart-main{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                grid-gap: 16px;
+                grid-column: 2/12;
+                .section1{
+                    .club-select{
+                        grid-template-rows: auto auto;
+                        label{
+                            grid-column: 1/2;
+                            margin-bottom: 0;
+                            align-self: center;
+                        }
+                        input{
+                            grid-row: 2;
+                            grid-column: 2/4;
+                        }
+                        button{
+                            grid-row: 2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1024px) {
+    body{
+        #cart-wrapper{
+            .cart-main{
+                display: grid;
+                grid-template-columns: repeat(12,1fr);
+                grid-gap: 16px;
+                grid-column: 1/13;
+                section{
+                    grid-column: 1/9;
+                }
+
+                section.order-total-wrapper{
+                    grid-column: 9/13;
+                    grid-row: 1;
+                }
+            }
+        }
     }
 }
