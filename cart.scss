@@ -51,7 +51,7 @@ body{
 
     h1, h2, h3{
         margin: 10px 0;
-        font-weight: normal;
+        font-weight: 700;
     }
     #cart-wrapper{
         width: 100%;
@@ -61,6 +61,178 @@ body{
             margin-top: 20px;
             .steps{
                 color: #b3b3b3;
+            }
+        }
+
+        .cart-main{
+            display:grid;
+            grid-template-columns:repeat(4, 1fr);
+            grid-gap:16px;
+            grid-auto-rows: auto;
+            section{
+                border: 1px solid #b3b3b3;
+                width: 100%;
+                padding: 16px;
+                grid-column: 1/5;
+                h1, h2, h3{
+                    margin-top: 0;
+                }
+            }
+            .section1{
+                .delivery-method{
+                    border-bottom: 1px solid #b3b3b3;
+                    padding-bottom: 16px;
+                }
+    
+                .club-select{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    grid-template-rows: auto auto 1fr;
+                    padding: 16px 0;
+                    grid-row-gap: 16px;
+                    grid-column-gap: 8px;
+                    h3{
+                        grid-column: 1/5;
+                        margin-bottom: 0;
+                        grid-template-rows: auto;
+                    }
+                    label{
+                        align-self: center;
+                        grid-row: 2;
+                        grid-column: 1/5;
+                    }
+                    input{
+                        padding: 5px;
+                        grid-column: 1/4;
+                        grid-row: 3;
+                    }
+                    button{
+                        grid-column: 4/5;
+                        grid-row: 3;
+                    }
+                }
+            }
+    
+            .order-total{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto auto auto;
+                .promo-code{
+                    grid-column: 1/3;
+                    color: #1977d3;
+                    span.brackets{
+                        color: #8d8d8d;
+                        font-size: 12px;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                .subtotal-name{
+                    grid-column: 1/2;
+                    grid-row: 2;
+                }
+                .subtotal-value{
+                    grid-column: 2/3;
+                    grid-row: 2;
+                }
+                .sales-tax-text{
+                    grid-column: 1/2;
+                    grid-row: 3;
+                }
+                .sales-tax-value{
+                    grid-column: 2/3;
+                    grid-row: 3;
+                }
+    
+                .total-section{
+                    border-top: 1px solid #b3b3b3;
+                    grid-column: 1/3;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    p{
+                        margin: 16px 0;
+                    }
+    
+                    .grand-total-value{
+                        justify-self: end;
+                    }
+    
+                    .grand-total, .grand-total-value{
+                        font-size: 20px;
+                    }
+                }
+    
+                .subtotal-value, .sales-tax-value{
+                    justify-self: end;
+                }
+    
+                .subtotal-name, .subtotal-value, .sales-tax-text, .sales-tax-value{
+                    margin: 5px 0;
+                } 
+            }
+    
+            .continue-btn{
+                border: 0;
+                padding: 0;
+                button{
+                    width: 100%;
+                }
+            }
+    
+            .order-summary{
+                .order-summary-title{
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #b3b3b3;
+                    span.change-order{
+                        color: #1977D3;
+                    }
+                }
+                .availability{
+                    padding-top: 8px;
+                    .blue-clickable{
+                        color: #1977D3;
+                    }
+                }
+                .my-orders-wrapper{
+                    display: grid;
+                    grid-row-gap: 16px;
+                    margin-top: 16px;
+                    .my-order-grid{
+                        display: grid;
+                        grid-column-gap: 16px;
+                        grid-row-gap: 8px;
+                        grid-template-columns: 72px 1fr;
+                        grid-auto-rows: auto; 
+                        border-bottom: 1px solid #b3b3b3;
+                        padding-bottom: 16px;
+                        &:last-child{
+                            border: 0;
+                        }
+                        img{
+                            grid-column: 1;
+                            grid-row: 1 / 4;
+                            justify-self: center;
+                            align-self: center;
+                        }
+    
+                        h4{
+                            margin: 0;
+                            grid-column: 2 / 3;
+                            align-self: center;
+                        }
+                        .item-price{
+                            grid-column: 2 / 3;
+                            align-self: center;
+                            font-weight: 700;
+                        }
+                        .item-quantity{
+                            grid-column: 2 / 3;
+                            align-self: center;
+                        }
+                    }
+                }
             }
         }
         
@@ -75,122 +247,7 @@ body{
             width: auto;
         }
     }
-    .cart-main{
-        display:grid;
-        grid-template-columns:repeat(4, 1fr);
-        grid-gap:16px;
-        grid-auto-rows: minmax(88px, auto);
-        section{
-            border: 1px solid #b3b3b3;
-            width: 100%;
-            padding: 16px;
-            grid-column: 1/5;
-            h1, h2, h3{
-                margin-top: 0;
-            }
-        }
-        .section1{
-            .delivery-method{
-                border-bottom: 1px solid #b3b3b3;
-                padding-bottom: 16px;
-            }
 
-            .club-select{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-template-rows: auto auto 1fr;
-                padding: 16px 0;
-                grid-row-gap: 16px;
-                grid-column-gap: 8px;
-                h3{
-                    grid-column: 1/5;
-                    margin-bottom: 0;
-                    grid-template-rows: auto;
-                }
-                label{
-                    align-self: center;
-                    grid-row: 2;
-                    grid-column: 1/5;
-                }
-                input{
-                    padding: 5px;
-                    grid-column: 1/4;
-                    grid-row: 3;
-                }
-                button{
-                    grid-column: 4/5;
-                    grid-row: 3;
-                }
-            }
-        }
-
-        .order-total{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto auto auto;
-            .promo-code{
-                grid-column: 1/3;
-                color: #1977d3;
-                span.brackets{
-                    color: #8d8d8d;
-                    font-size: 12px;
-                }
-                &:hover{
-                    cursor: pointer;
-                }
-            }
-            .subtotal-name{
-                grid-column: 1/2;
-                grid-row: 2;
-            }
-            .subtotal-value{
-                grid-column: 2/3;
-                grid-row: 2;
-            }
-            .sales-tax-text{
-                grid-column: 1/2;
-                grid-row: 3;
-            }
-            .sales-tax-value{
-                grid-column: 2/3;
-                grid-row: 3;
-            }
-
-            .total-section{
-                border-top: 1px solid #b3b3b3;
-                grid-column: 1/3;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                p{
-                    margin: 16px 0;
-                }
-
-                .grand-total-value{
-                    justify-self: end;
-                }
-
-                .grand-total, .grand-total-value{
-                    font-size: 20px;
-                }
-            }
-
-            .subtotal-value, .sales-tax-value{
-                justify-self: end;
-            }
-
-            .subtotal-name, .subtotal-value, .sales-tax-text, .sales-tax-value{
-                margin: 5px 0;
-            } 
-        }
-
-        .continue-btn{
-            border: 0;
-            padding: 0;
-            button{
-                width: 100%;
-            }
-        }
-    }
 
     header{
         height: 50px;
@@ -204,7 +261,8 @@ body{
         #cart-wrapper{
             display:grid;
             grid-template-columns:repeat(12, 1fr);
-            grid-gap:16px;
+            grid-column-gap:8px;
+            grid-row-gap: 16px;
             .title{
                 margin-top: 20px;
                 grid-column: 2/12;
@@ -212,11 +270,13 @@ body{
             .cart-main{
                 display: grid;
                 grid-template-columns: repeat(4,1fr);
-                grid-gap: 16px;
+                grid-column-gap:8px;
+                grid-row-gap: 16px;
                 grid-column: 2/12;
                 .section1{
                     .club-select{
                         grid-template-rows: auto auto;
+                        grid-template-columns: auto 1fr 1fr 1fr 1fr;
                         label{
                             grid-column: 1/2;
                             margin-bottom: 0;
@@ -228,6 +288,25 @@ body{
                         }
                         button{
                             grid-row: 2;
+                            grid-column: 4/5;
+                        }
+                    }
+                }
+                .order-summary{
+                    .my-orders-wrapper{
+                        .my-order-grid{
+                            grid-template-columns: repeat(12,1fr);
+                            h4{
+                                grid-column: 2/12;
+                            }
+                            .item-price{
+                                grid-column: 12/13;
+                                grid-row: 1;
+                            }
+                            .item-quantity{
+                                grid-column: 2/12;
+                                grid-row: 2;
+                            }
                         }
                     }
                 }
@@ -240,6 +319,9 @@ body{
 @media (min-width: 1024px) {
     body{
         #cart-wrapper{
+            .title{
+                grid-column: 1/12;
+            }
             .cart-main{
                 display: grid;
                 grid-template-columns: repeat(12,1fr);
@@ -253,7 +335,21 @@ body{
                     grid-column: 9/13;
                     grid-row: 1;
                 }
+
+                section.continue-btn{
+                    grid-column: 9/13;
+                    grid-row: 2;
+                }
             }
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    body{
+        #cart-wrapper{
+            max-width: 1024px;
+            margin: auto;
         }
     }
 }
