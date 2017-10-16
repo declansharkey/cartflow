@@ -1,0 +1,15 @@
+// Varialbes
+$border-color: rgba(66,66,66,0.2);
+$link-color: #1977d3;             
+
+
+// Mixins
+@mixin btn-cta {
+    min-width: 50px;
+    background: none;
+    border: none;
+    color: #1977d3;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0;
+}

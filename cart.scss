@@ -1,3 +1,5 @@
+@import 'global.scss';
+
 *{
     box-sizing: border-box;
 }
@@ -34,7 +36,9 @@
 }
 
 .hidden{
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
 }
 
 body{
@@ -143,10 +147,41 @@ body{
                         grid-row: 2;
                         color: #b3b3b3;
                     }
-                    .view-details{
+                    .view-details-btn {
                         grid-column: 3/4;
                         grid-row: 2;
                         color: #1977d3;
+                    }
+
+                    .view-details {
+                        display: grid;
+                        grid-row: 3;
+                        grid-column: 2 / 4;
+
+                        .details-weekdays,
+                        .details-sat, 
+                        .details-sun {
+                            display: grid;
+                            grid-template-columns: 1.5fr 1fr 1fr;
+
+                            .details-tel,
+                            .details-viewmap {
+                                grid-column: 1;
+                            }
+    
+                            .details-day {
+                                grid-column: 2;
+                            }
+    
+                            .details-time {
+                                grid-column: 3;
+                                justify-self: flex-end;
+                            }
+
+                            .details-viewmap {
+                                color: $link-color;
+                            }
+                        }
                     }
                 }
             }

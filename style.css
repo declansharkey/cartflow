@@ -24,7 +24,9 @@
       background-color: rgba(76, 169, 12, 0.1); }
 
 .hidden {
-  display: none; }
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0; }
 
 body {
   color: #424242;
@@ -108,10 +110,39 @@ body {
             grid-column: 2/3;
             grid-row: 2;
             color: #b3b3b3; }
-          body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details {
+          body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details-btn {
             grid-column: 3/4;
             grid-row: 2;
             color: #1977d3; }
+          body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details {
+            display: grid;
+            grid-row: 3;
+            grid-column: 2 / 4; }
+            body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays,
+            body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat,
+            body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun {
+              display: grid;
+              grid-template-columns: 1.5fr 1fr 1fr; }
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-tel,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-viewmap,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat .details-tel,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat .details-viewmap,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun .details-tel,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun .details-viewmap {
+                grid-column: 1; }
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-day,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat .details-day,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun .details-day {
+                grid-column: 2; }
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-time,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat .details-time,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun .details-time {
+                grid-column: 3;
+                justify-self: flex-end; }
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-viewmap,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat .details-viewmap,
+              body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun .details-viewmap {
+                color: #1977d3; }
       body #cart-wrapper .cart-main .order-total {
         display: grid;
         grid-template-columns: 1fr 1fr;
