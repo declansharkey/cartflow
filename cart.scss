@@ -353,6 +353,12 @@ body{
                 }
                 section.section1{
                     grid-row: span 3;
+                    
+                    .clubs-list{
+                        .club-wrapper:last-child{
+                            margin-bottom: 0;
+                        }
+                    }
                 }
                 section.order-total-wrapper{
                     grid-column: 9/13;
