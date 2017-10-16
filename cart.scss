@@ -56,7 +56,6 @@ body{
 
     h1{
         font-size: 16px;
-        
     }
 
     h1.main-title{
@@ -64,10 +63,6 @@ body{
         color: #4ca90c;
     }
 
-    h1, h2, h3{
-        margin: 10px 0;
-        font-weight: 700;
-    }
     #cart-wrapper{
         width: 100%;
         padding: 0 16px;
@@ -155,125 +150,125 @@ body{
                     }
                 }
             }
-        }
 
-        .order-total{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto auto auto;
-            .promo-code{
-                grid-column: 1/3;
-                color: #1977d3;
-                span.brackets{
-                    color: #8d8d8d;
-                    font-size: 12px;
-                }
-                &:hover{
-                    cursor: pointer;
-                }
-            }
-            .subtotal-name{
-                grid-column: 1/2;
-                grid-row: 2;
-            }
-            .subtotal-value{
-                grid-column: 2/3;
-                grid-row: 2;
-            }
-            .sales-tax-text{
-                grid-column: 1/2;
-                grid-row: 3;
-            }
-            .sales-tax-value{
-                grid-column: 2/3;
-                grid-row: 3;
-            }
-
-            .total-section{
-                border-top: 1px solid #b3b3b3;
-                grid-column: 1/3;
+            .order-total{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                p{
-                    margin: 16px 0;
+                grid-template-rows: auto auto auto auto;
+                .promo-code{
+                    grid-column: 1/3;
+                    color: #1977d3;
+                    span.brackets{
+                        color: #8d8d8d;
+                        font-size: 12px;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
-
-                .grand-total-value{
+                .subtotal-name{
+                    grid-column: 1/2;
+                    grid-row: 2;
+                }
+                .subtotal-value{
+                    grid-column: 2/3;
+                    grid-row: 2;
+                }
+                .sales-tax-text{
+                    grid-column: 1/2;
+                    grid-row: 3;
+                }
+                .sales-tax-value{
+                    grid-column: 2/3;
+                    grid-row: 3;
+                }
+    
+                .total-section{
+                    border-top: 1px solid #b3b3b3;
+                    grid-column: 1/3;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    p{
+                        margin: 16px 0;
+                    }
+    
+                    .grand-total-value{
+                        justify-self: end;
+                    }
+    
+                    .grand-total, .grand-total-value{
+                        font-size: 20px;
+                    }
+                }
+    
+                .subtotal-value, .sales-tax-value{
                     justify-self: end;
                 }
-
-                .grand-total, .grand-total-value{
-                    font-size: 20px;
+    
+                .subtotal-name, .subtotal-value, .sales-tax-text, .sales-tax-value{
+                    margin: 5px 0;
+                } 
+            }
+    
+            .continue-btn{
+                border: 0;
+                padding: 0;
+                button{
+                    width: 100%;
                 }
             }
 
-            .subtotal-value, .sales-tax-value{
-                justify-self: end;
-            }
-
-            .subtotal-name, .subtotal-value, .sales-tax-text, .sales-tax-value{
-                margin: 5px 0;
-            } 
-        }
-
-        .continue-btn{
-            border: 0;
-            padding: 0;
-            button{
-                width: 100%;
-            }
-        }
-
-        .order-summary{
-            .order-summary-title{
-                display: flex;
-                justify-content: space-between;
-                border-bottom: 1px solid #b3b3b3;
-                span.change-order{
-                    color: #1977D3;
-                }
-            }
-            .availability{
-                padding-top: 8px;
-                .blue-clickable{
-                    color: #1977D3;
-                }
-            }
-            .my-orders-wrapper{
-                display: grid;
-                grid-row-gap: 16px;
-                margin-top: 16px;
-                .my-order-grid{
-                    display: grid;
-                    grid-column-gap: 16px;
-                    grid-row-gap: 8px;
-                    grid-template-columns: 72px 1fr;
-                    grid-auto-rows: auto; 
+            .order-summary{
+                .order-summary-title{
+                    display: flex;
+                    justify-content: space-between;
                     border-bottom: 1px solid #b3b3b3;
-                    padding-bottom: 16px;
-                    &:last-child{
-                        border: 0;
+                    span.change-order{
+                        color: #1977D3;
                     }
-                    img{
-                        grid-column: 1;
-                        grid-row: 1 / 4;
-                        justify-self: center;
-                        align-self: center;
+                }
+                .availability{
+                    padding-top: 8px;
+                    .blue-clickable{
+                        color: #1977D3;
                     }
-
-                    h4{
-                        margin: 0;
-                        grid-column: 2 / 3;
-                        align-self: center;
-                    }
-                    .item-price{
-                        grid-column: 2 / 3;
-                        align-self: center;
-                        font-weight: 700;
-                    }
-                    .item-quantity{
-                        grid-column: 2 / 3;
-                        align-self: center;
+                }
+                .my-orders-wrapper{
+                    display: grid;
+                    grid-row-gap: 16px;
+                    margin-top: 16px;
+                    .my-order-grid{
+                        display: grid;
+                        grid-column-gap: 16px;
+                        grid-row-gap: 8px;
+                        grid-template-columns: 72px 1fr;
+                        grid-auto-rows: auto; 
+                        border-bottom: 1px solid #b3b3b3;
+                        padding-bottom: 16px;
+                        &:last-child{
+                            border: 0;
+                        }
+                        img{
+                            grid-column: 1;
+                            grid-row: 1 / 4;
+                            justify-self: center;
+                            align-self: center;
+                        }
+    
+                        h4{
+                            margin: 0;
+                            grid-column: 2 / 3;
+                            align-self: center;
+                        }
+                        .item-price{
+                            grid-column: 2 / 3;
+                            align-self: center;
+                            font-weight: 700;
+                        }
+                        .item-quantity{
+                            grid-column: 2 / 3;
+                            align-self: center;
+                        }
                     }
                 }
             }
@@ -360,12 +355,12 @@ body{
                 section.order-total-wrapper{
                     grid-column: 9/13;
                     grid-row: 1;
+                    align-self: start;
                 }
 
                 section.continue-btn{
                     grid-column: 9/13;
                     grid-row: 2;
-                    border: 0;
                     padding: 0;
                 }
             }
