@@ -33,11 +33,26 @@
     }
 }
 
+.hidden{
+    display: none;
+}
+
 body{
     color: #424242;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin: 0;
+    header{
+        height: 50px;
+        background-color: #084c8b;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img{
+            height: 100%;
+            width: auto;
+        }
+    }
 
     h1{
         font-size: 16px;
@@ -83,7 +98,7 @@ body{
                     border-bottom: 1px solid #b3b3b3;
                     padding-bottom: 16px;
                 }
-    
+
                 .club-select{
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -112,146 +127,157 @@ body{
                     }
                 }
             }
-    
-            .order-total{
+            .clubs-list{
+                margin-top: 5px;
+                .club-wrapper{
+                    display: grid;
+                    grid-template-columns: auto 1fr auto;
+                    grid-gap: 8px;
+                    padding: 16px;
+                    margin-bottom: 16px;
+                    border: 1px solid #b3b3b3;
+                    input{
+                        align-self: start;
+                    }
+                    label{
+                        grid-column: 2/4;
+                        grid-row: 1;
+                    }
+                    .distance{
+                        grid-column: 2/3;
+                        grid-row: 2;
+                        color: #b3b3b3;
+                    }
+                    .view-details{
+                        grid-column: 3/4;
+                        grid-row: 2;
+                        color: #1977d3;
+                    }
+                }
+            }
+        }
+
+        .order-total{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto auto;
+            .promo-code{
+                grid-column: 1/3;
+                color: #1977d3;
+                span.brackets{
+                    color: #8d8d8d;
+                    font-size: 12px;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .subtotal-name{
+                grid-column: 1/2;
+                grid-row: 2;
+            }
+            .subtotal-value{
+                grid-column: 2/3;
+                grid-row: 2;
+            }
+            .sales-tax-text{
+                grid-column: 1/2;
+                grid-row: 3;
+            }
+            .sales-tax-value{
+                grid-column: 2/3;
+                grid-row: 3;
+            }
+
+            .total-section{
+                border-top: 1px solid #b3b3b3;
+                grid-column: 1/3;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto auto auto auto;
-                .promo-code{
-                    grid-column: 1/3;
-                    color: #1977d3;
-                    span.brackets{
-                        color: #8d8d8d;
-                        font-size: 12px;
-                    }
-                    &:hover{
-                        cursor: pointer;
-                    }
+                p{
+                    margin: 16px 0;
                 }
-                .subtotal-name{
-                    grid-column: 1/2;
-                    grid-row: 2;
-                }
-                .subtotal-value{
-                    grid-column: 2/3;
-                    grid-row: 2;
-                }
-                .sales-tax-text{
-                    grid-column: 1/2;
-                    grid-row: 3;
-                }
-                .sales-tax-value{
-                    grid-column: 2/3;
-                    grid-row: 3;
-                }
-    
-                .total-section{
-                    border-top: 1px solid #b3b3b3;
-                    grid-column: 1/3;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    p{
-                        margin: 16px 0;
-                    }
-    
-                    .grand-total-value{
-                        justify-self: end;
-                    }
-    
-                    .grand-total, .grand-total-value{
-                        font-size: 20px;
-                    }
-                }
-    
-                .subtotal-value, .sales-tax-value{
+
+                .grand-total-value{
                     justify-self: end;
                 }
-    
-                .subtotal-name, .subtotal-value, .sales-tax-text, .sales-tax-value{
-                    margin: 5px 0;
-                } 
-            }
-    
-            .continue-btn{
-                border: 0;
-                padding: 0;
-                button{
-                    width: 100%;
+
+                .grand-total, .grand-total-value{
+                    font-size: 20px;
                 }
             }
-    
-            .order-summary{
-                .order-summary-title{
-                    display: flex;
-                    justify-content: space-between;
-                    border-bottom: 1px solid #b3b3b3;
-                    span.change-order{
-                        color: #1977D3;
-                    }
+
+            .subtotal-value, .sales-tax-value{
+                justify-self: end;
+            }
+
+            .subtotal-name, .subtotal-value, .sales-tax-text, .sales-tax-value{
+                margin: 5px 0;
+            } 
+        }
+
+        .continue-btn{
+            border: 0;
+            padding: 0;
+            button{
+                width: 100%;
+            }
+        }
+
+        .order-summary{
+            .order-summary-title{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid #b3b3b3;
+                span.change-order{
+                    color: #1977D3;
                 }
-                .availability{
-                    padding-top: 8px;
-                    .blue-clickable{
-                        color: #1977D3;
-                    }
+            }
+            .availability{
+                padding-top: 8px;
+                .blue-clickable{
+                    color: #1977D3;
                 }
-                .my-orders-wrapper{
+            }
+            .my-orders-wrapper{
+                display: grid;
+                grid-row-gap: 16px;
+                margin-top: 16px;
+                .my-order-grid{
                     display: grid;
-                    grid-row-gap: 16px;
-                    margin-top: 16px;
-                    .my-order-grid{
-                        display: grid;
-                        grid-column-gap: 16px;
-                        grid-row-gap: 8px;
-                        grid-template-columns: 72px 1fr;
-                        grid-auto-rows: auto; 
-                        border-bottom: 1px solid #b3b3b3;
-                        padding-bottom: 16px;
-                        &:last-child{
-                            border: 0;
-                        }
-                        img{
-                            grid-column: 1;
-                            grid-row: 1 / 4;
-                            justify-self: center;
-                            align-self: center;
-                        }
-    
-                        h4{
-                            margin: 0;
-                            grid-column: 2 / 3;
-                            align-self: center;
-                        }
-                        .item-price{
-                            grid-column: 2 / 3;
-                            align-self: center;
-                            font-weight: 700;
-                        }
-                        .item-quantity{
-                            grid-column: 2 / 3;
-                            align-self: center;
-                        }
+                    grid-column-gap: 16px;
+                    grid-row-gap: 8px;
+                    grid-template-columns: 72px 1fr;
+                    grid-auto-rows: auto; 
+                    border-bottom: 1px solid #b3b3b3;
+                    padding-bottom: 16px;
+                    &:last-child{
+                        border: 0;
+                    }
+                    img{
+                        grid-column: 1;
+                        grid-row: 1 / 4;
+                        justify-self: center;
+                        align-self: center;
+                    }
+
+                    h4{
+                        margin: 0;
+                        grid-column: 2 / 3;
+                        align-self: center;
+                    }
+                    .item-price{
+                        grid-column: 2 / 3;
+                        align-self: center;
+                        font-weight: 700;
+                    }
+                    .item-quantity{
+                        grid-column: 2 / 3;
+                        align-self: center;
                     }
                 }
             }
         }
-        
-    }
-
-    header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        img{
-            height: 100%;
-            width: auto;
-        }
-    }
-
-
-    header{
-        height: 50px;
-        background-color: #084c8b;
     }
 }
 
@@ -339,6 +365,8 @@ body{
                 section.continue-btn{
                     grid-column: 9/13;
                     grid-row: 2;
+                    border: 0;
+                    padding: 0;
                 }
             }
         }
