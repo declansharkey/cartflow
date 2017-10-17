@@ -26,7 +26,7 @@
 .hidden {
   opacity: 0;
   visibility: hidden;
-  max-height: 0; }
+  height: 0; }
 
 body {
   color: #424242;
@@ -123,6 +123,8 @@ body {
           grid-row: 3; }
       body #cart-wrapper .cart-main .clubs-list {
         margin-top: 5px; }
+        body #cart-wrapper .cart-main .clubs-list .clubs-list-title {
+          margin-top: 15px; }
         body #cart-wrapper .cart-main .clubs-list .club-wrapper {
           padding: 16px;
           margin-bottom: 16px;

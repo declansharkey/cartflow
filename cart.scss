@@ -38,7 +38,7 @@
 .hidden{
     opacity: 0;
     visibility: hidden;
-    max-height: 0;
+    height: 0;
 }
 
 body{
@@ -168,6 +168,11 @@ body{
             }
             .clubs-list{
                 margin-top: 5px;
+
+                .clubs-list-title {
+                    margin-top: 15px;
+                }
+
                 .club-wrapper{
                     // display: grid;
                     // grid-template-columns: auto 1fr auto;
