@@ -95,7 +95,7 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto auto 1fr;
-        padding: 16px 0;
+        padding: 16px 0 0;
         grid-row-gap: 16px;
         grid-column-gap: 8px; }
         body #cart-wrapper .cart-main .section1 .club-select h3 {
@@ -164,45 +164,52 @@ body {
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat .details-viewmap,
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun .details-viewmap {
                 color: #1977d3; }
-      body #cart-wrapper .cart-main .order-total {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto auto; }
-        body #cart-wrapper .cart-main .order-total .promo-code {
-          grid-column: 1/3;
-          color: #1977d3; }
-          body #cart-wrapper .cart-main .order-total .promo-code span.brackets {
-            color: #8d8d8d;
-            font-size: 12px; }
-          body #cart-wrapper .cart-main .order-total .promo-code:hover {
-            cursor: pointer; }
-        body #cart-wrapper .cart-main .order-total .subtotal-name {
-          grid-column: 1/2;
-          grid-row: 2; }
-        body #cart-wrapper .cart-main .order-total .subtotal-value {
-          grid-column: 2/3;
-          grid-row: 2; }
-        body #cart-wrapper .cart-main .order-total .sales-tax-text {
-          grid-column: 1/2;
-          grid-row: 3; }
-        body #cart-wrapper .cart-main .order-total .sales-tax-value {
-          grid-column: 2/3;
-          grid-row: 3; }
-        body #cart-wrapper .cart-main .order-total .total-section {
-          border-top: 1px solid #b3b3b3;
-          grid-column: 1/3;
-          display: grid;
-          grid-template-columns: 1fr 1fr; }
-          body #cart-wrapper .cart-main .order-total .total-section p {
-            margin: 16px 0; }
-          body #cart-wrapper .cart-main .order-total .total-section .grand-total-value {
-            justify-self: end; }
-          body #cart-wrapper .cart-main .order-total .total-section .grand-total, body #cart-wrapper .cart-main .order-total .total-section .grand-total-value {
-            font-size: 20px; }
-        body #cart-wrapper .cart-main .order-total .subtotal-value, body #cart-wrapper .cart-main .order-total .sales-tax-value {
-          justify-self: end; }
-        body #cart-wrapper .cart-main .order-total .subtotal-name, body #cart-wrapper .cart-main .order-total .subtotal-value, body #cart-wrapper .cart-main .order-total .sales-tax-text, body #cart-wrapper .cart-main .order-total .sales-tax-value {
-          margin: 5px 0; }
+      body #cart-wrapper .cart-main .order-total-wrapper {
+        border: none;
+        padding: 0; }
+        body #cart-wrapper .cart-main .order-total-wrapper .order-container {
+          border: 1px solid #b3b3b3;
+          padding: 16px;
+          margin-bottom: 16px; }
+          body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto auto; }
+            body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .promo-code {
+              grid-column: 1/3;
+              color: #1977d3; }
+              body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .promo-code span.brackets {
+                color: #8d8d8d;
+                font-size: 12px; }
+              body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .promo-code:hover {
+                cursor: pointer; }
+            body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .subtotal-name {
+              grid-column: 1/2;
+              grid-row: 2; }
+            body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .subtotal-value {
+              grid-column: 2/3;
+              grid-row: 2; }
+            body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .sales-tax-text {
+              grid-column: 1/2;
+              grid-row: 3; }
+            body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .sales-tax-value {
+              grid-column: 2/3;
+              grid-row: 3; }
+            body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .total-section {
+              border-top: 1px solid #b3b3b3;
+              grid-column: 1/3;
+              display: grid;
+              grid-template-columns: 1fr 1fr; }
+              body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .total-section p {
+                margin: 16px 0; }
+              body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .total-section .grand-total-value {
+                justify-self: end; }
+              body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .total-section .grand-total, body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .total-section .grand-total-value {
+                font-size: 20px; }
+            body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .subtotal-value, body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .sales-tax-value {
+              justify-self: end; }
+            body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .subtotal-name, body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .subtotal-value, body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .sales-tax-text, body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .sales-tax-value {
+              margin: 5px 0; }
       body #cart-wrapper .cart-main .continue-btn {
         border: 0;
         padding: 0; }
@@ -294,16 +301,19 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 16px;
-    grid-column: 1/13; }
+    grid-column: 1/13;
+    grid-template-rows: auto auto auto auto; }
     body #cart-wrapper .cart-main section {
       grid-column: 1/9; }
     body #cart-wrapper .cart-main section.section1 {
-      grid-row: span 3; }
+      grid-row: 1; }
       body #cart-wrapper .cart-main section.section1 .clubs-list .club-wrapper:last-child {
         margin-bottom: 0; }
+    body #cart-wrapper .cart-main section.pay-method {
+      grid-row: 2; }
     body #cart-wrapper .cart-main section.order-total-wrapper {
       grid-column: 9/13;
-      grid-row: 1;
+      grid-row: span 2;
       align-self: start; }
     body #cart-wrapper .cart-main section.continue-btn {
       grid-column: 9/13;
