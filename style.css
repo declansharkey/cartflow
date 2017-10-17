@@ -32,6 +32,7 @@ body {
   color: #424242;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
+  line-height: 20px;
   margin: 0; }
   body header {
     height: 50px;
@@ -124,7 +125,7 @@ body {
       body #cart-wrapper .cart-main .clubs-list {
         margin-top: 5px; }
         body #cart-wrapper .cart-main .clubs-list .clubs-list-title {
-          margin-top: 15px; }
+          margin-top: 20px; }
         body #cart-wrapper .cart-main .clubs-list .club-wrapper {
           padding: 16px;
           margin-bottom: 16px;
@@ -142,20 +143,21 @@ body {
             position: relative;
             z-index: 2; }
           body #cart-wrapper .cart-main .clubs-list .club-wrapper .distance {
-            grid-column: 2/3;
-            grid-row: 2;
+            grid-column: 3/4;
+            grid-row: 1;
             color: #b3b3b3; }
           body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details-btn {
             grid-column: 3/4;
-            grid-row: 2;
+            grid-row: 1;
             color: #1977d3;
-            cursor: pointer; }
+            cursor: pointer;
+            justify-self: end;
+            align-self: end; }
           body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details {
             display: grid;
             grid-row: 3;
             grid-column: 2 / 4;
             overflow: hidden;
-            max-height: 0;
             will-change: max-height transform;
             padding-left: 25px;
             position: relative;
@@ -164,7 +166,7 @@ body {
             body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat,
             body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun {
               display: grid;
-              grid-template-columns: 1.5fr 1fr 1fr;
+              grid-template-columns: 1fr max-content;
               line-height: 20px; }
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-tel,
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-viewmap,
@@ -176,7 +178,8 @@ body {
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-day,
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat .details-day,
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun .details-day {
-                grid-column: 2; }
+                grid-column: 2;
+                padding-right: 40px; }
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-time,
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat .details-time,
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun .details-time {

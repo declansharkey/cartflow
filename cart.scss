@@ -45,6 +45,7 @@ body{
     color: #424242;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    line-height: 20px;
     margin: 0;
     header{
         height: 50px;
@@ -170,7 +171,7 @@ body{
                 margin-top: 5px;
 
                 .clubs-list-title {
-                    margin-top: 15px;
+                    margin-top: 20px;
                 }
 
                 .club-wrapper{
@@ -198,15 +199,17 @@ body{
                     }
 
                     .distance{
-                        grid-column: 2/3;
-                        grid-row: 2;
+                        grid-column: 3/4;
+                        grid-row: 1;
                         color: #b3b3b3;
                     }
                     .view-details-btn {
                         grid-column: 3/4;
-                        grid-row: 2;
+                        grid-row: 1;
                         color: #1977d3;
                         cursor: pointer;
+                        justify-self: end;
+                        align-self: end;
                     }
 
                     .view-details {
@@ -214,7 +217,6 @@ body{
                         grid-row: 3;
                         grid-column: 2 / 4;
                         overflow: hidden;
-                        max-height: 0;
                         will-change: max-height transform;
                         padding-left: 25px;
                         position: relative;
@@ -224,7 +226,7 @@ body{
                         .details-sat, 
                         .details-sun {
                             display: grid;
-                            grid-template-columns: 1.5fr 1fr 1fr;
+                            grid-template-columns: 1fr max-content;
                             line-height: 20px;
 
                             .details-tel,
@@ -234,6 +236,7 @@ body{
     
                             .details-day {
                                 grid-column: 2;
+                                padding-right: 40px;
                             }
     
                             .details-time {
