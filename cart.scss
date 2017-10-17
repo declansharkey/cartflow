@@ -160,9 +160,9 @@ body{
             .clubs-list{
                 margin-top: 5px;
                 .club-wrapper{
-                    display: grid;
-                    grid-template-columns: auto 1fr auto;
-                    grid-gap: 8px;
+                    // display: grid;
+                    // grid-template-columns: auto 1fr auto;
+                    // grid-gap: 8px;
                     padding: 16px;
                     margin-bottom: 16px;
                     border: 1px solid #b3b3b3;
@@ -173,6 +173,16 @@ body{
                         grid-column: 2/4;
                         grid-row: 1;
                     }
+
+                    .club-info {
+                        display: grid;
+                        grid-template-columns: auto 1fr auto;
+                        grid-gap: 8px;
+                        background-color: #fff;
+                        position: relative;
+                        z-index: 2;
+                    }
+
                     .distance{
                         grid-column: 2/3;
                         grid-row: 2;
@@ -182,18 +192,26 @@ body{
                         grid-column: 3/4;
                         grid-row: 2;
                         color: #1977d3;
+                        cursor: pointer;
                     }
 
                     .view-details {
                         display: grid;
                         grid-row: 3;
                         grid-column: 2 / 4;
+                        overflow: hidden;
+                        max-height: 0;
+                        will-change: max-height transform;
+                        padding-left: 25px;
+                        position: relative;
+                        z-index: 1;
 
                         .details-weekdays,
                         .details-sat, 
                         .details-sun {
                             display: grid;
                             grid-template-columns: 1.5fr 1fr 1fr;
+                            line-height: 20px;
 
                             .details-tel,
                             .details-viewmap {
