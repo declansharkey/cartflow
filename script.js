@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     $(".continue-btn").click(function () {
         $.get( "http://127.0.0.1:8887/html-partials/section1.html", function( data ) {
-          $( ".section1" ).html( data );
+          $( ".cart-main" ).html( data );
         });
     });
 
