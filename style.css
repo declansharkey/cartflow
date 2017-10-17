@@ -61,36 +61,43 @@ body {
       grid-gap: 16px;
       grid-auto-rows: auto; }
       body #cart-wrapper .cart-main section {
-        border: 1px solid #b3b3b3;
+        border: 1px solid rgba(66, 66, 66, 0.2);
         width: 100%;
         padding: 16px;
         grid-column: 1/5; }
         body #cart-wrapper .cart-main section h1, body #cart-wrapper .cart-main section h2, body #cart-wrapper .cart-main section h3 {
           margin-top: 0; }
       body #cart-wrapper .cart-main .section1 .delivery-method {
-        border-bottom: 1px solid #b3b3b3;
+        border-bottom: 1px solid rgba(66, 66, 66, 0.2);
         padding-bottom: 16px; }
       body #cart-wrapper .cart-main .section1 .delivery-method-step2 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        border-bottom: 1px solid #b3b3b3; }
+        border-bottom: 1px solid rgba(66, 66, 66, 0.2);
+        margin-bottom: 16px; }
       body #cart-wrapper .cart-main .section1 .pickup-location {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
-        grid-gap: 16px; }
+        grid-gap: 16px;
+        border-bottom: 1px solid rgba(66, 66, 66, 0.2);
+        margin-bottom: 16px; }
         body #cart-wrapper .cart-main .section1 .pickup-location h3 {
           grid-column: 1/3;
           margin-bottom: 0; }
         body #cart-wrapper .cart-main .section1 .pickup-location address {
           grid-column: 1/3;
-          grid-row: 2/3; }
+          grid-row: 2/3;
+          font-style: normal; }
         body #cart-wrapper .cart-main .section1 .pickup-location .distance {
-          grid-column: 1/2; }
+          grid-column: 1/2;
+          color: rgba(66, 66, 66, 0.6); }
         body #cart-wrapper .cart-main .section1 .pickup-location .view-details {
           grid-column: 2/3;
-          justify-self: end; }
+          justify-self: end;
+          color: rgba(66, 66, 66, 0.8);
+          margin-bottom: 16px; }
       body #cart-wrapper .cart-main .section1 .club-select {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -109,24 +116,29 @@ body {
         body #cart-wrapper .cart-main .section1 .club-select input {
           padding: 5px;
           grid-column: 1/4;
-          grid-row: 3; }
+          grid-row: 3;
+          border: 1px solid rgba(66, 66, 66, 0.2); }
         body #cart-wrapper .cart-main .section1 .club-select button {
           grid-column: 4/5;
           grid-row: 3; }
       body #cart-wrapper .cart-main .clubs-list {
         margin-top: 5px; }
         body #cart-wrapper .cart-main .clubs-list .club-wrapper {
-          display: grid;
-          grid-template-columns: auto 1fr auto;
-          grid-gap: 8px;
           padding: 16px;
           margin-bottom: 16px;
-          border: 1px solid #b3b3b3; }
+          border: 1px solid rgba(66, 66, 66, 0.2); }
           body #cart-wrapper .cart-main .clubs-list .club-wrapper input {
             align-self: start; }
           body #cart-wrapper .cart-main .clubs-list .club-wrapper label {
             grid-column: 2/4;
             grid-row: 1; }
+          body #cart-wrapper .cart-main .clubs-list .club-wrapper .club-info {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            grid-gap: 8px;
+            background-color: #fff;
+            position: relative;
+            z-index: 2; }
           body #cart-wrapper .cart-main .clubs-list .club-wrapper .distance {
             grid-column: 2/3;
             grid-row: 2;
@@ -134,16 +146,24 @@ body {
           body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details-btn {
             grid-column: 3/4;
             grid-row: 2;
-            color: #1977d3; }
+            color: #1977d3;
+            cursor: pointer; }
           body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details {
             display: grid;
             grid-row: 3;
-            grid-column: 2 / 4; }
+            grid-column: 2 / 4;
+            overflow: hidden;
+            max-height: 0;
+            will-change: max-height transform;
+            padding-left: 25px;
+            position: relative;
+            z-index: 1; }
             body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays,
             body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat,
             body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sun {
               display: grid;
-              grid-template-columns: 1.5fr 1fr 1fr; }
+              grid-template-columns: 1.5fr 1fr 1fr;
+              line-height: 20px; }
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-tel,
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-weekdays .details-viewmap,
               body #cart-wrapper .cart-main .clubs-list .club-wrapper .view-details .details-sat .details-tel,
@@ -168,7 +188,7 @@ body {
         border: none;
         padding: 0; }
         body #cart-wrapper .cart-main .order-total-wrapper .order-container {
-          border: 1px solid #b3b3b3;
+          border: 1px solid rgba(66, 66, 66, 0.2);
           padding: 16px;
           margin-bottom: 16px; }
           body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total {
@@ -196,7 +216,7 @@ body {
               grid-column: 2/3;
               grid-row: 3; }
             body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .total-section {
-              border-top: 1px solid #b3b3b3;
+              border-top: 1px solid rgba(66, 66, 66, 0.2);
               grid-column: 1/3;
               display: grid;
               grid-template-columns: 1fr 1fr; }
@@ -218,7 +238,7 @@ body {
       body #cart-wrapper .cart-main .order-summary .order-summary-title {
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid #b3b3b3; }
+        border-bottom: 1px solid rgba(66, 66, 66, 0.2); }
         body #cart-wrapper .cart-main .order-summary .order-summary-title span.change-order {
           color: #1977D3; }
       body #cart-wrapper .cart-main .order-summary .availability {
@@ -235,7 +255,7 @@ body {
           grid-row-gap: 8px;
           grid-template-columns: 72px 1fr;
           grid-auto-rows: auto;
-          border-bottom: 1px solid #b3b3b3;
+          border-bottom: 1px solid rgba(66, 66, 66, 0.2);
           padding-bottom: 16px; }
           body #cart-wrapper .cart-main .order-summary .my-orders-wrapper .my-order-grid:last-child {
             border: 0; }
