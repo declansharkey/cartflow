@@ -23,12 +23,8 @@ $(document).ready(function () {
         });
     });
 
-<<<<<<< HEAD
-    $('.view-details-btn').click(function () {
-=======
     // View Detials Button
     $('.view-details-btn').click(function() {
->>>>>>> cb2fdd0663d19b181d1a66e991a98190bfac9bf7
         var viewDetails = $(this).parent().siblings('.view-details');
         ('.view-details');
         if (viewDetails.hasClass('hidden')) {
@@ -40,11 +36,7 @@ $(document).ready(function () {
         }
         else {
             var tl = new TimelineMax();
-<<<<<<< HEAD
-            tl.to($(viewDetails), 0.3, { y: -20, maxHeight: 0, opacity: 0 }, 0);
-=======
             tl.to($(viewDetails), 0.3, { y: -20, height: 0, opacity: 0}, 0);
->>>>>>> cb2fdd0663d19b181d1a66e991a98190bfac9bf7
             tl.set($(viewDetails), { className: "+=hidden" }, 0.3);
             $(this).text('+ View details');
         }
