@@ -4,12 +4,14 @@ $(document).ready(function () {
         if ($('.clubs-list').hasClass('hidden')) {
             setTimeout(function () {
                 TweenMax.set($('.clubs-list'), { className: "-=hidden" });
-                TweenMax.fromTo($('.clubs-list'), 0.3, { y: -20, opacity: 0, maxHeight: '0' }, { y: 0, opacity: 1, maxHeight: '400px' })
+                TweenMax.fromTo($('.clubs-list'), 0.3, { y: -10, opacity: 0 }, { y: 0, opacity: 1 });
+                TweenLite.set($('.clubs-list'), { height: 'auto' });
+                TweenLite.from($('.clubs-list'), 0.3, { height: 0 });
             }, 0);
 
         } else {
             var tl = new TimelineMax();
-            tl.to($('.clubs-list'), 0.3, { y: -20, opacity: 0, maxHeight: '0' }, 0);
+            tl.to($('.clubs-list'), 0.3, { y: -20, opacity: 0, height: 0 }, 0);
             tl.set($('.clubs-list'), { className: "+=hidden" }, 0.3);
         }
     });
@@ -21,17 +23,30 @@ $(document).ready(function () {
         });
     });
 
+<<<<<<< HEAD
     $('.view-details-btn').click(function () {
+=======
+    // View Detials Button
+    $('.view-details-btn').click(function() {
+>>>>>>> cb2fdd0663d19b181d1a66e991a98190bfac9bf7
         var viewDetails = $(this).parent().siblings('.view-details');
         ('.view-details');
         if (viewDetails.hasClass('hidden')) {
-            TweenMax.fromTo($(viewDetails), 0.3, { y: -20, maxHeight: 0, opacity: 0 }, { y: 0, maxHeight: '70px', opacity: 1 });
+            TweenMax.fromTo($(viewDetails), 0.3, { y: -20, opacity: 0 }, { y: 0, opacity: 1 });
+            TweenLite.set($(viewDetails), { height: 'auto' });
+            TweenLite.from($(viewDetails), 0.3, { height: 0 });
             TweenMax.set($(viewDetails), { className: "-=hidden" });
+            $(this).text('- Hide details');
         }
         else {
             var tl = new TimelineMax();
+<<<<<<< HEAD
             tl.to($(viewDetails), 0.3, { y: -20, maxHeight: 0, opacity: 0 }, 0);
+=======
+            tl.to($(viewDetails), 0.3, { y: -20, height: 0, opacity: 0}, 0);
+>>>>>>> cb2fdd0663d19b181d1a66e991a98190bfac9bf7
             tl.set($(viewDetails), { className: "+=hidden" }, 0.3);
+            $(this).text('+ View details');
         }
     })
 });
