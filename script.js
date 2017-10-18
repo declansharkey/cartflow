@@ -15,12 +15,13 @@ $(document).ready(function () {
     });
 
     $(".continue-btn").click(function () {
-        $.get( "http://127.0.0.1:8887/html-partials/section1.html", function( data ) {
-          $( ".cart-main" ).html( data );
+        $.get("http://127.0.0.1:8887/html-partials/section1.html", function (data) {
+            $(".cart-main").html(data);
+            $(".order-summary").load("index.html .order-summary .ajax-call-orders");
         });
     });
 
-    $('.view-details-btn').click(function() {
+    $('.view-details-btn').click(function () {
         var viewDetails = $(this).parent().siblings('.view-details');
         ('.view-details');
         if (viewDetails.hasClass('hidden')) {
@@ -29,7 +30,7 @@ $(document).ready(function () {
         }
         else {
             var tl = new TimelineMax();
-            tl.to($(viewDetails), 0.3, { y: -20, maxHeight: 0, opacity: 0}, 0);
+            tl.to($(viewDetails), 0.3, { y: -20, maxHeight: 0, opacity: 0 }, 0);
             tl.set($(viewDetails), { className: "+=hidden" }, 0.3);
         }
     })
