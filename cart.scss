@@ -12,6 +12,7 @@
     border-radius: 2px;
     text-align: center;
     font-size: 16px;
+    border: 1px solid #4ca90c;
     &:hover{
         cursor: pointer;
     }
@@ -20,7 +21,6 @@
     &.btn-primary{
         color: #FFF;
         background-color: #4ca90c;
-        border: 1px solid #4ca90c;
         &:hover{
             background-color: rgba(76,169,12,0.7);
         }
@@ -28,10 +28,11 @@
 
     &.btn-secondary{
         color: #4ca90c;
-        border: 1px solid #4ca90c;
-        background-color: #FFF;
+        background-color: #ffffff;
+        
         &:hover{
             background-color: rgba(76,169,12,0.1);
+            transition: background-color .4s ease;
         }
     }
 }
@@ -72,7 +73,7 @@ body{
     
     #cart-wrapper{
         width: 100%;
-        padding: 0 16px;
+        padding: 0 8px;
         box-sizing: border-box;
         .title{
             margin-top: 20px;
@@ -140,31 +141,29 @@ body{
                 }
 
                 .club-select{
-                    display: grid;
-                    grid-template-columns: 1fr 1fr 1fr 1fr;
-                    grid-template-rows: auto auto 1fr;
+                    display: flex;
                     padding: 16px 0 0;
                     grid-row-gap: 16px;
-                    grid-column-gap: 8px;
+                    flex-wrap: wrap;
                     h3{
-                        grid-column: 1/5;
-                        margin-bottom: 0;
-                        grid-template-rows: auto;
+                        width: 100%;
+                        margin-bottom: 16px;
                     }
                     label{
-                        align-self: center;
-                        grid-row: 2;
-                        grid-column: 1/5;
+                        width: 100%;
+                        margin-bottom: 16px;
                     }
                     input{
+                        margin: 0 8px 0 0;
                         padding: 5px;
-                        grid-column: 1/4;
                         grid-row: 3;
                         border: 1px solid rgba(66,66,66,0.2);
+                        height: 40px;
+                        width: 188px;
                     }
                     button{
-                        grid-column: 4/5;
                         grid-row: 3;
+                        width: 74px;
                     }
                 }
             }
@@ -410,20 +409,13 @@ body{
                 grid-column: 2/12;
                 .section1{
                     .club-select{
-                        grid-template-rows: auto auto;
-                        grid-template-columns: auto 1fr 1fr 1fr 1fr;
-                        label{
-                            grid-column: 1/2;
-                            margin-bottom: 0;
-                            align-self: center;
-                        }
                         input{
                             grid-row: 2;
-                            grid-column: 2/4;
+                            margin: 0 8px 0 0;
+                            width: 240px;
                         }
                         button{
                             grid-row: 2;
-                            grid-column: 4/5;
                         }
                     }
                 }
@@ -469,7 +461,22 @@ body{
                 }
                 section.section1{
                     grid-row: 1;
-
+                    
+                    .club-select{
+                        label{
+                            width: auto;
+                            align-self: center;
+                            margin: 0;
+                        }
+                        input{
+                            grid-row: 2;
+                            margin: 0 8px 0 16px ;
+                            width: 240px;
+                        }
+                        button{
+                            grid-row: 2;
+                        }
+                    }
                     .clubs-list{
                         .club-wrapper:last-child{
                             margin-bottom: 0;
