@@ -351,8 +351,32 @@ body {
     body #cart-wrapper .cart-main section.continue-btn {
       grid-column: 9/13;
       grid-row: 2;
-      padding: 0; } }
+      padding: 0; }
+  body #cart-wrapper .page-2 .section1 {
+    animation: up 1s cubic-bezier(0.42, 0, 0, 0.995), fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+    -webkit-animation: up 1s cubic-bezier(0.42, 0, 0, 0.995), fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+    opacity: 0; }
+  body #cart-wrapper .page-2 .order-summary {
+    animation: up 1s cubic-bezier(0.42, 0, 0, 0.995), fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+    -webkit-animation: up 1s cubic-bezier(0.42, 0, 0, 0.995), fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+    opacity: 0; }
+  body #cart-wrapper .page-2 .section1.delay {
+    animation-delay: .2s;
+    -webkit-animation-delay: .2s; }
+  body #cart-wrapper .page-2 .delay2 {
+    animation-delay: .5s;
+    -webkit-animation-delay: .5s; } }
 @media (min-width: 1025px) {
   body #cart-wrapper {
     max-width: 1024px;
     margin: auto; } }
+@keyframes up {
+  0% {
+    transform: translateY(100px); }
+  100% {
+    transform: translateY(0); } }
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
