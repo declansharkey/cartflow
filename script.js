@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
     $(".club-select button").click(function () {
 
@@ -18,13 +20,21 @@ $(document).ready(function () {
 
     $(".continue-btn").click(function () {
         $.get("http://127.0.0.1:8887/html-partials/section1.html", function (data) {
-            $(".cart-main").html(data);
+            $(".cart-main").html(data).addClass("page-2");
             $(".order-summary").load("index.html .order-summary .ajax-call-orders");
         });
     });
 
-    // View Detials Button
-    $('.view-details-btn').click(function() {
+
+    $(document).ajaxComplete(function () {
+        $(".page-2 .backbutton").click(function () {
+            window.location.href = 'http://127.0.0.1:8887/index.html';
+        });
+    });
+
+
+    // View Details Button
+    $('.view-details-btn').click(function () {
         var viewDetails = $(this).parent().siblings('.view-details');
         ('.view-details');
         if (viewDetails.hasClass('hidden')) {
@@ -36,7 +46,7 @@ $(document).ready(function () {
         }
         else {
             var tl = new TimelineMax();
-            tl.to($(viewDetails), 0.3, { y: -20, height: 0, opacity: 0}, 0);
+            tl.to($(viewDetails), 0.3, { y: -20, height: 0, opacity: 0 }, 0);
             tl.set($(viewDetails), { className: "+=hidden" }, 0.3);
             $(this).text('+ View details');
         }

@@ -23,6 +23,9 @@
       background-color: rgba(76, 169, 12, 0.1);
       transition: background-color .4s ease; }
 
+.blue-clickable {
+  color: #1977D3; }
+
 .hidden {
   opacity: 0;
   visibility: hidden;
@@ -246,8 +249,6 @@ body {
           color: #1977D3; }
       body #cart-wrapper .cart-main .order-summary .availability {
         padding-top: 8px; }
-        body #cart-wrapper .cart-main .order-summary .availability .blue-clickable {
-          color: #1977D3; }
       body #cart-wrapper .cart-main .order-summary .my-orders-wrapper {
         display: grid;
         grid-row-gap: 16px;
@@ -278,6 +279,11 @@ body {
           body #cart-wrapper .cart-main .order-summary .my-orders-wrapper .my-order-grid .item-quantity {
             grid-column: 2 / 3;
             align-self: center; }
+      body #cart-wrapper .cart-main .backbtn {
+        border: 0;
+        padding: 16px 0; }
+        body #cart-wrapper .cart-main .backbtn .backbutton:hover {
+          cursor: pointer; }
 
 @media (min-width: 768px) {
   body #cart-wrapper {

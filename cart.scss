@@ -37,6 +37,10 @@
     }
 }
 
+.blue-clickable{
+    color: #1977D3;
+}
+
 .hidden{
     opacity: 0;
     visibility: hidden;
@@ -342,9 +346,6 @@ body{
                 }
                 .availability{
                     padding-top: 8px;
-                    .blue-clickable{
-                        color: #1977D3;
-                    }
                 }
                 .my-orders-wrapper{
                     display: grid;
@@ -382,6 +383,16 @@ body{
                             grid-column: 2 / 3;
                             align-self: center;
                         }
+                    }
+                }
+            }
+
+            .backbtn{
+                border: 0;
+                padding: 16px 0;
+                .backbutton{
+                    &:hover{
+                        cursor: pointer;
                     }
                 }
             }
