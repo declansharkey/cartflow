@@ -18,6 +18,7 @@ $(document).ready(function () {
         }
     });
 
+
     $(".continue-btn").click(function () {
         $.get("http://127.0.0.1:8887/html-partials/section1.html", function (data) {
             $(".cart-main").html(data).addClass("page-2");
@@ -27,11 +28,10 @@ $(document).ready(function () {
         });
     });
 
-    
-
     $(document).ajaxComplete(function () {
         $(".page-2 .backbutton").click(function () {
-            window.location.href = 'http://127.0.0.1:8887/index.html';
+            //$("#cart-wrapper").load("index.html .cart-main").addClass("test");
+            $("#cart-wrapper").append($('.cart-main').load('index.html .cart-main section'));
         });
     });
 
