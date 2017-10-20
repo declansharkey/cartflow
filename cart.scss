@@ -470,6 +470,13 @@ body{
                 section{
                     grid-column: 1/9;
                 }
+                .revieworder{
+                    background-color: #FFF6DE;
+                    height: 40px;
+                    grid-row:1;
+                    opacity: 1;
+                    padding: 10px 8px;
+                }
                 section.section1{
                     grid-row: 1;
                     
@@ -510,23 +517,25 @@ body{
                 }
             }
             .page-2{
-                .section1{
-                    animation: up 1s cubic-bezier(0.42, 0, 0, 0.995),fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
-                    -webkit-animation: up 1s cubic-bezier(0.42, 0, 0, 0.995),fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
-                    opacity: 0;
+                .section1.delay{
+                    grid-row:2;
                 }
-                .order-summary{
-                    animation: up 1s cubic-bezier(0.42, 0, 0, 0.995),fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
-                    -webkit-animation: up 1s cubic-bezier(0.42, 0, 0, 0.995),fade 0.5s cubic-bezier(0.42, 0, 0, 0.995) forwards;
+                .section1, .order-summary{
+                    animation: up .3s cubic-bezier(0,0,.2,1),fade 0.3s cubic-bezier(0,0,.2,1) forwards;
+                    -webkit-animation: up .3s cubic-bezier(0,0,.2,1),fade 0.3s cubic-bezier(0,0,.2,1) forwards;
                     opacity: 0;
                 }
                 .section1.delay{
-                    animation-delay: .2s;
-                    -webkit-animation-delay: .2s;
+                    animation-delay: .3s;
+                    -webkit-animation-delay: .3s;
                 }
                 .delay2{
-                    animation-delay: .5s;
-                    -webkit-animation-delay: .5s;
+                    animation-delay: .4s;
+                    -webkit-animation-delay: .4s;
+                }
+                .inactive{
+                    animation: fadeout 1s cubic-bezier(0.42, 0, 0, 0.995);
+                    -webkit-animation: fadeout 1s cubic-bezier(0.42, 0, 0, 0.995);
                 }
             }
         }
@@ -546,7 +555,7 @@ body{
 // ====== Animation Keyframes ======
 @keyframes up {
     0% {
-      transform: translateY(100px);
+      transform: translateY(20px);
     }
     
     100% {
@@ -560,5 +569,14 @@ body{
     
     100% {
       opacity: 1;
+    }
+}
+@keyframes fadeout {
+    0% {
+      opacity: 1;
+    }
+    
+    100% {
+      opacity: 0;
     }
 }
