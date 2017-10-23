@@ -19,18 +19,16 @@ $(document).ready(function () {
     });
 
 
-    $(".continue-btn").click(function () {
+    $(document).on("click", ".continue-btn", function () {
         $.get("http://127.0.0.1:8887/html-partials/section1.html", function (data) {
             $(".cart-main").html(data).addClass("page-2");
             $(".section1").addClass("delay");
-            $(".order-summary").load("index.html .order-summary .ajax-call-orders");
-            $(".order-summary").addClass("delay2");
+            $(".order-summary").load("index.html .order-summary .ajax-call-orders").addClass("delay2");
         });
     });
 
     $(document).ajaxComplete(function () {
-        $(".page-2 .backbutton").click(function () {
-            //$("#cart-wrapper").load("index.html .cart-main").addClass("test");
+        $(document).on("click", ".page-2 .backbutton", function () {
             $("#cart-wrapper").append($('.cart-main').load('index.html .cart-main section'));
         });
     });
