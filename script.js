@@ -31,6 +31,10 @@ $(document).ready(function () {
     $(document).on("click", ".page-2 .continue-btn-verify", function () {
         $.get("http://127.0.0.1:8887/html-partials/verification.html", function (data) {
             $(".cart-main").toggleClass("page-2 page-3").html(data).prepend($("<section class='order-total-wrapper'></section>").load('index.html .order-container'));
+            $(".revieworder").addClass("delay");
+            $(".section1").addClass("delay2");
+            $(".order-summary").load("index.html .order-summary .ajax-call-orders");
+            $(".order-summary").addClass("delay3");
         });
     });
 
@@ -60,3 +64,4 @@ $(document).ready(function () {
         }
     })
 });
+

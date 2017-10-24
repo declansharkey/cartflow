@@ -37,6 +37,7 @@
     }
 }
 
+
 .blue-clickable{
     color: #1977D3;
 }
@@ -484,6 +485,13 @@ body{
                 section{
                     grid-column: 1/9;
                 }
+                .revieworder{
+                    background-color: #FFF6DE;
+                    height: 40px;
+                    grid-row:1;
+                    opacity: 0;
+                    padding: 10px 8px;
+                }
                 section.section1{
                     grid-row: 1;
                     
@@ -524,10 +532,10 @@ body{
                 }
             }
             .page-2{
-                .section1.delay{
+                .section1.delay2{
                     grid-row:2;
                 }
-                .section1, .order-summary{
+                .revieworder, .section1, .order-summary{
                     animation: up .3s cubic-bezier(0,0,.2,1),fade 0.3s cubic-bezier(0,0,.2,1) forwards;
                     -webkit-animation: up .3s cubic-bezier(0,0,.2,1),fade 0.3s cubic-bezier(0,0,.2,1) forwards;
                     opacity: 0;
@@ -535,14 +543,15 @@ body{
                 .section1.delay{
                     animation-delay: .3s;
                     -webkit-animation-delay: .3s;
+                    grid-row: 2;
                 }
                 .delay2{
                     animation-delay: .4s;
                     -webkit-animation-delay: .4s;
                 }
-                .inactive{
-                    animation: fadeout 1s cubic-bezier(0.42, 0, 0, 0.995);
-                    -webkit-animation: fadeout 1s cubic-bezier(0.42, 0, 0, 0.995);
+                .delay3{
+                    animation-delay: .5s;
+                    -webkit-animation-delay: .5s;
                 }
             }
         }
