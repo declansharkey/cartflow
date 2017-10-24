@@ -290,8 +290,23 @@ body {
         padding: 16px 0; }
         body #cart-wrapper .cart-main .backbtn .backbutton:hover {
           cursor: pointer; }
+<<<<<<< Updated upstream
       body #cart-wrapper .cart-main.page-3 .verification {
         grid-row: 1; }
+=======
+    body #cart-wrapper .cart-main.page-2 .revieworder {
+      background-color: #FFF6DE;
+      height: 40px;
+      grid-row: 1;
+      padding: 10px 8px;
+      border: none;
+      opacity: 0; }
+    body #cart-wrapper .cart-main.page-2 .section1 {
+      grid-row: 2;
+      opacity: 0; }
+    body #cart-wrapper .cart-main.page-2 .order-summar {
+      opacity: 0; }
+>>>>>>> Stashed changes
 
 @media (min-width: 768px) {
   body #cart-wrapper {
@@ -336,12 +351,6 @@ body {
     grid-template-rows: auto auto auto auto; }
     body #cart-wrapper .cart-main section {
       grid-column: 1/9; }
-    body #cart-wrapper .cart-main .revieworder {
-      background-color: #FFF6DE;
-      height: 40px;
-      grid-row: 1;
-      opacity: 0;
-      padding: 10px 8px; }
     body #cart-wrapper .cart-main section.section1 {
       grid-row: 1; }
       body #cart-wrapper .cart-main section.section1 .club-select label {
@@ -365,6 +374,7 @@ body {
     body #cart-wrapper .cart-main section.continue-btn {
       grid-column: 9/13;
       grid-row: 2;
+<<<<<<< Updated upstream
       padding: 0; }
   body #cart-wrapper .page-2 .section1.delay2 {
     grid-row: 2; }
@@ -382,22 +392,10 @@ body {
   body #cart-wrapper .page-2 .delay3 {
     animation-delay: .5s;
     -webkit-animation-delay: .5s; } }
+=======
+      padding: 0; } }
+>>>>>>> Stashed changes
 @media (min-width: 1025px) {
   body #cart-wrapper {
     max-width: 1024px;
     margin: auto; } }
-@keyframes up {
-  0% {
-    transform: translateY(20px); }
-  100% {
-    transform: translateY(0); } }
-@keyframes fade {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-@keyframes fadeout {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }

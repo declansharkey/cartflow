@@ -412,6 +412,23 @@ body{
                 }
             }
         }
+        .cart-main.page-2{
+            .revieworder{
+                background-color: #FFF6DE;
+                height: 40px;
+                grid-row:1;
+                padding: 10px 8px;
+                border: none;
+                opacity: 0;
+            }
+            .section1{
+                grid-row: 2;
+                opacity: 0;
+            }
+            .order-summar{
+                opacity: 0;
+            }
+        }
     }
 }
 
@@ -485,13 +502,6 @@ body{
                 section{
                     grid-column: 1/9;
                 }
-                .revieworder{
-                    background-color: #FFF6DE;
-                    height: 40px;
-                    grid-row:1;
-                    opacity: 0;
-                    padding: 10px 8px;
-                }
                 section.section1{
                     grid-row: 1;
                     
@@ -531,6 +541,7 @@ body{
                     padding: 0;
                 }
             }
+<<<<<<< Updated upstream
             .page-2{
                 .section1.delay2{
                     grid-row:2;
@@ -554,6 +565,8 @@ body{
                     -webkit-animation-delay: .5s;
                 }
             }
+=======
+>>>>>>> Stashed changes
         }
     }
     
@@ -565,34 +578,5 @@ body{
             max-width: 1024px;
             margin: auto;
         }
-    }
-}
-
-// ====== Animation Keyframes ======
-@keyframes up {
-    0% {
-      transform: translateY(20px);
-    }
-    
-    100% {
-      transform: translateY(0);
-    }
-}
-@keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    
-    100% {
-      opacity: 1;
-    }
-}
-@keyframes fadeout {
-    0% {
-      opacity: 1;
-    }
-    
-    100% {
-      opacity: 0;
     }
 }
