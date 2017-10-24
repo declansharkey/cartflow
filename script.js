@@ -22,8 +22,15 @@ $(document).ready(function () {
     $(document).on("click", ".continue-btn", function () {
         $.get("http://127.0.0.1:8887/html-partials/section1.html", function (data) {
             $(".cart-main").html(data).addClass("page-2");
+<<<<<<< Updated upstream
             $(".section1").addClass("delay");
             $(".order-summary").load("index.html .order-summary .ajax-call-orders").addClass("delay2");
+=======
+            $(".revieworder").addClass("delay");
+            $(".section1").addClass("delay2");
+            $(".order-summary").load("index.html .order-summary .ajax-call-orders");
+            $(".order-summary").addClass("delay3");
+>>>>>>> Stashed changes
         });
     });
 
