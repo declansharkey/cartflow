@@ -1,7 +1,7 @@
 
 
 $(document).ready(function () {
-    $(".club-select button").click(function () {
+    $(document).on("click", ".club-select button", function () {
 
         if ($('.clubs-list').hasClass('hidden')) {
             setTimeout(function () {
@@ -24,18 +24,25 @@ $(document).ready(function () {
             $(".cart-main").html(data).addClass("page-2");
             $(".section1").addClass("delay");
             $(".order-summary").load("index.html .order-summary .ajax-call-orders").addClass("delay2");
+            $(".continue-btn").toggleClass("continue-btn continue-btn-verify");
+        });
+    });
+
+    $(document).on("click", ".page-2 .continue-btn-verify", function () {
+        $.get("http://127.0.0.1:8887/html-partials/verification.html", function (data) {
+            $(".cart-main").toggleClass("page-2 page-3").html(data).prepend($("<section class='order-total-wrapper'></section>").load('index.html .order-container'));
         });
     });
 
     $(document).ajaxComplete(function () {
         $(document).on("click", ".page-2 .backbutton", function () {
-            $("#cart-wrapper").append($('.cart-main').load('index.html .cart-main section'));
+            $("#cart-wrapper").append($('.cart-main section').load('index.html .cart-main section'));
         });
     });
 
 
     // View Details Button
-    $('.view-details-btn').click(function () {
+    $(document).on("click", ".view-details-btn", function () {
         var viewDetails = $(this).parent().siblings('.view-details');
         ('.view-details');
         if (viewDetails.hasClass('hidden')) {

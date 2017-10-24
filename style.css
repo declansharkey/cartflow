@@ -71,6 +71,12 @@ body {
         grid-column: 1/5; }
         body #cart-wrapper .cart-main section h1, body #cart-wrapper .cart-main section h2, body #cart-wrapper .cart-main section h3 {
           margin-top: 0; }
+      body #cart-wrapper .cart-main .revieworder {
+        background-color: #FFF6DE;
+        grid-row: 1;
+        opacity: 1;
+        padding: 10px 8px;
+        border: 0; }
       body #cart-wrapper .cart-main .section1 .delivery-method {
         border-bottom: 1px solid rgba(66, 66, 66, 0.2);
         padding-bottom: 16px; }
@@ -236,10 +242,10 @@ body {
               justify-self: end; }
             body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .subtotal-name, body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .subtotal-value, body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .sales-tax-text, body #cart-wrapper .cart-main .order-total-wrapper .order-container .order-total .sales-tax-value {
               margin: 5px 0; }
-      body #cart-wrapper .cart-main .continue-btn {
+      body #cart-wrapper .cart-main .continue-btn, body #cart-wrapper .cart-main .continue-btn-verify {
         border: 0;
         padding: 0; }
-        body #cart-wrapper .cart-main .continue-btn button {
+        body #cart-wrapper .cart-main .continue-btn button, body #cart-wrapper .cart-main .continue-btn-verify button {
           width: 100%; }
       body #cart-wrapper .cart-main .order-summary .order-summary-title {
         display: flex;
@@ -284,6 +290,8 @@ body {
         padding: 16px 0; }
         body #cart-wrapper .cart-main .backbtn .backbutton:hover {
           cursor: pointer; }
+      body #cart-wrapper .cart-main.page-3 .verification {
+        grid-row: 1; }
 
 @media (min-width: 768px) {
   body #cart-wrapper {
@@ -328,12 +336,6 @@ body {
     grid-template-rows: auto auto auto auto; }
     body #cart-wrapper .cart-main section {
       grid-column: 1/9; }
-    body #cart-wrapper .cart-main .revieworder {
-      background-color: #FFF6DE;
-      height: 40px;
-      grid-row: 1;
-      opacity: 1;
-      padding: 10px 8px; }
     body #cart-wrapper .cart-main section.section1 {
       grid-row: 1; }
       body #cart-wrapper .cart-main section.section1 .club-select label {

@@ -87,6 +87,7 @@ body{
         }
 
         .cart-main{
+
             display:grid;
             grid-template-columns:repeat(4, 1fr);
             grid-gap:16px;
@@ -99,6 +100,13 @@ body{
                 h1, h2, h3{
                     margin-top: 0;
                 }
+            }
+            .revieworder{
+                background-color: #FFF6DE;
+                grid-row:1;
+                opacity: 1;
+                padding: 10px 8px;
+                border: 0;
             }
             .section1{
                 .delivery-method{
@@ -327,7 +335,7 @@ body{
                 }
             }
         
-            .continue-btn{
+            .continue-btn, .continue-btn-verify{
                 border: 0;
                 padding: 0;
                 button{
@@ -394,6 +402,12 @@ body{
                     &:hover{
                         cursor: pointer;
                     }
+                }
+            }
+
+            &.page-3{
+                .verification{
+                    grid-row: 1;
                 }
             }
         }
@@ -469,13 +483,6 @@ body{
 
                 section{
                     grid-column: 1/9;
-                }
-                .revieworder{
-                    background-color: #FFF6DE;
-                    height: 40px;
-                    grid-row:1;
-                    opacity: 1;
-                    padding: 10px 8px;
                 }
                 section.section1{
                     grid-row: 1;
