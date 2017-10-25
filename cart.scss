@@ -110,6 +110,8 @@ body{
                 border: 0;
             }
             .section1{
+                opacity: 0;
+                
                 .delivery-method{
                     border-bottom: 1px solid rgba(66,66,66,0.2);
                     padding-bottom: 16px;
@@ -179,6 +181,10 @@ body{
                         width: 74px;
                     }
                 }
+            }
+
+            .pay-method {
+                opacity: 0;
             }
             .clubs-list{
                 margin-top: 5px;
@@ -345,6 +351,7 @@ body{
             }
 
             .order-summary{
+                opacity: 0;
                 .order-summary-title{
                     display: flex;
                     justify-content: space-between;
@@ -539,6 +546,11 @@ body{
                     grid-column: 9/13;
                     grid-row: 2;
                     padding: 0;
+                }
+            }
+            .page-2{
+                .section1.delay2{
+                    grid-row:2;
                 }
             }
         }
